@@ -1,0 +1,24 @@
+{
+  "name": "valentine",
+  "version": "1.0.0",
+  "description": "Valentine's Day app",
+  "scripts": {
+    "build:css": "tailwindcss -i ./styles.css -o ./output.css",
+    "build:js": "esbuild index.tsx --bundle --outfile=bundle.js --external:react --external:react-dom --format=esm",
+    "serve": "http-server -p 8080",
+    "dev": "concurrently \"tailwindcss -i ./styles.css -o ./output.css --watch\" \"esbuild index.tsx --bundle --watch --outfile=bundle.js --external:react --external:react-dom --format=esm\" \"http-server -p 8080\""
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.33",
+    "autoprefixer": "^10.4.17",
+    "http-server": "^14.1.1",
+    "concurrently": "^8.2.2",
+    "esbuild": "^0.20.2"
+  },
+  "dependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "canvas-confetti": "^1.9.4"
+  }
+}
