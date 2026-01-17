@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Valentine's Day app",
   "scripts": {
+    "build": "npm run build:css && npm run build:js",
     "build:css": "tailwindcss -i ./styles.css -o ./output.css",
     "build:js": "esbuild index.tsx --bundle --outfile=bundle.js --external:react --external:react-dom --format=esm",
     "serve": "http-server -p 8080",

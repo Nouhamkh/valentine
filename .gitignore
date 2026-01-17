@@ -5,6 +5,3 @@ build/
 .DS_Store
 .env
 .env.local
-output.css
-bundle.js
-node_modules
